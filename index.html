@@ -237,7 +237,7 @@
       <div class="section-header scroll-reveal">
         <div class="section-label">Our Products</div>
         <h2 class="section-title">Complete Hardware Range</h2>
-        <p class="section-sub">Dynamic product catalog — live from our database</p>
+        <p class="section-sub">Complete catalog of industrial hardware — all products available on enquiry</p>
       </div>
 
       <!-- Search & Filter -->
@@ -257,28 +257,15 @@
         </div>
       </div>
 
-      <!-- Loading State -->
-      <div id="productsLoading" class="products-loading">
-        <div class="loading-spinner"></div>
-        <p>Loading products from catalog...</p>
-      </div>
+      <!-- Product Grid (populated by STATIC_PRODUCTS in script.js) -->
+      <div class="products-grid" id="productsGrid"></div>
 
-      <!-- Product Grid -->
-      <div class="products-grid" id="productsGrid" style="display:none;"></div>
-
-      <!-- No results -->
+      <!-- No results (shown by JS when search/filter returns zero matches) -->
       <div id="noResults" class="no-results" style="display:none;">
         <i class="fa-solid fa-magnifying-glass"></i>
         <h3>No products found</h3>
         <p>Try a different search term or select another category.</p>
         <button onclick="resetFilters()" class="btn btn-primary">Clear Filters</button>
-      </div>
-
-      <!-- Error State -->
-      <div id="productsError" class="products-error" style="display:none;">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-        <h3>Could not load products</h3>
-        <p>Showing cached product list instead.</p>
       </div>
 
     </div>
